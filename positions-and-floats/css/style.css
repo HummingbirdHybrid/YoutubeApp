@@ -7,9 +7,7 @@
 }
 
 body {
-    margin-top: 198px;
     height: 2000px;
-    position: relative;
     font-family: "Myriad Pro";
     font-size: 12px;
     color: rgb(51, 51, 51);
@@ -27,55 +25,49 @@ body {
     display: table;
 }
 
-#PagesContainer {
-    margin-left: -263px;
-}
-
-#PagesContainer > div {
-    left: 50%;
-    border: solid 2px black;
-    position: absolute;
+.pages-container {
+    margin: 100px auto ;
+    position: relative;
+    width: 605px;
 }
 
 .page {
     width: 519px;
     height: 746px;
-
+    border: solid 2px black;
+    position: absolute;
 }
 
 #page1 {
     z-index: 3;
     background-color: #EBEBEB;
-    margin-left: -263px;
     padding: 30px 30px 20px 30px;
-
 }
 
 #page2 {
     z-index: 2;
     background-color: #CCCCCC;
     top: 20px;
-    margin-left: -243px;
-
+    left: 20px;
 }
 
 #page3 {
     background-color: #ACACAC;
     z-index: 1;
     top: 40px;
-    margin-left: -223px;
+    left: 40px;
 }
 
 .bookmark { /*3. Закладки делать псевдоэлементами конечно можно, но лучше нет.*/
     height: 31px;
     border: solid 2px black;
     border-radius: 0 10px 10px 0;
+    position: absolute;
 }
 
 #bookmark1 {
     width: 107px;
     background-color: #F68E56;
-    position: absolute;
     top: 39px;
     right: -82px;
 }
@@ -83,8 +75,6 @@ body {
 #bookmark2 {
     width: 95px;
     background-color: #39B54A;
-
-    position: absolute;
     top: 39px;
     right: -48px;
 }
@@ -93,18 +83,16 @@ body {
     width: 95px;
     height: 31px;
     background-color: #00AEEF;
-    position: absolute;
     top: 39px;
     right: -16px;
 }
 
-h1 { /*4. Лишние стили. Например для <h1> висят font-weight: normal;  text-align: left; Хотя они по умолчанию такие же*/
+h1 {
     font-size: 24px;
     padding-bottom: 20px;
 }
 
 h2 {
-    clear: both;
     padding-bottom: 25px;
     font-size: 18px;
 }
@@ -126,15 +114,15 @@ footer {
     float: right;
     padding: 0 0 20px 4px;
 }
-
-.jokesleft {
-    float: left;
+figure img {
     padding-bottom: 14px;
 }
 
-.jokesright {
+figure img:nth-of-type(odd){
+     float: left;
+ }
+figure img:nth-of-type(even){
     float: right;
-    padding-bottom: 14px;
 }
 
 aside {
@@ -154,7 +142,6 @@ aside > p {
 }
 
 #navlist {
-
     display: inline;
     padding: 0;
     margin: 0;

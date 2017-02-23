@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lorem ipsum dolor sit amet</title>
+    <meta name="description" content="Simple static page">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: "Myriad Pro";
+            src: url(css/fonts/MyriadPro/MyriadPro-Regular.otf);
+        }
+    </style>
+</head>
+<body>
+<div id="PagesContainer">
+    <div class="page" id="page1">
+        <main class="flowPurification">
+            <article>
+                <h1>Lorem ipsum dolor sit amet</h1>
+                <img id="coffee" src="img/coffee.png" alt="Cofee Picture">
+                <div class="bookmark" id="bookmark1"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Sed vel velit in nisl accumsan
+                    blandit. Mauris sed consequat tortor. Etiam
+                    enim odio, elementum sed risus id, faucibus
+                    lobortis felis. Donec maximus dolor in egestas
+                    fringilla. Pellentesque a neque quis eros
+                    lobortis mollis sit amet ut dolor. Aenean nec
+                    quam dictum, pharetra nulla et, ornare eros.
+                </p>
+                <p>Quisque accumsan felis vel dolor placerat, sed imperdiet dolor tempor. Morbi et molestie
+                    dolor, ac consectetur ipsum. Nullam varius risus in purus bibendum, in auctor odio eleifend.
+                    Proin cursus leo quis ex commodo, non placerat diam finibus.
+                </p>
+                <br>
+                <img id="img_table" src="img/webdesignerdeveloper.png" alt="Css to my html">
+                <p>Aliquam tempus gravida fermentum. Quisque vel sodales risus.
+                    Sed ultricies justo sem, in rutrum neque interdum eget. Donec
+                    nec metus nunc. Nullam tempus convallis porttitor. Aliquam
+                    tempus gravida fermentum. Quisque vel sodales risus. Sed
+                    ultricies justo sem, in rutrum neque interdum eget. Donec nec
+                    metus nunc. Nullam tempus convallis porttitor. Sed ultricies
+                    justo sem, in rutrum neque interdum eget. Donec nec metus
+                    nunc. Nullam tempus convallis porttitor.
+                </p>
+                <h2>Nulla viverra tortor efficitur vestibulum tristique.</h2>
+            </article>
+            <figure class="flowPurification">
+                <img src="img/csspunjokes1.png" class="jokesright" id="jk1" alt="Float Joke">
+                <img src="img/csspunjokes4.png" class="jokesleft" id="jk4" alt="Ninja Joke">
+                <img src="img/csspunjokes3.png" class="jokesleft" id="jk3" alt="table Joke">
+                <img src="img/csspunjokes2.png" class="jokesright" id="jk2" alt="triangle Joke">
+            </figure>
+        </main>
+        <footer>Suspendisse bibendum porttitor purus quis vestibulum. Etiam pellentesque justo ac dui cursus tincidunt.
+            Etiam iaculis semper metus vel facilisis. Etiam ut mi nec libero ullamcorper feugiat a eu augue.
+        </footer>
+    </div>
+    <div class="page" id="page2">
+        <div class="bookmark" id="bookmark2"></div>
+    </div>
+    <div class="page" id="page3">
+        <div class="bookmark" id="bookmark3"></div>
+    </div>
+</div>
+<!-- 1.Неправильное расположение блоков. В родительском контейнере должно быть 3 блока, где каждый - это страница с закладкой. Друг относительно друга должны быть спозиционированный с помощью position: absolut и наложены друг на друга z-index-->
+<aside>
+    <p>Share this</p>
+    <ul id="navlist"> <!-- дополнительное задание -->
+        <li id="facebook"></li>
+        <a href="https://twitter.com/intent/tweet?text=In Enduring%20grow%20Strong">
+            <li id="twitter"></li>
+        </a>
+        <li id="instagram"></li>
+    </ul>
+</aside>
+</body>
+</html>

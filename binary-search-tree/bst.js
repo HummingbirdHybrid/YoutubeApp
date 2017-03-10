@@ -8,7 +8,7 @@ function Node(key, data) {
     this._parent = null;
 }
 Node.prototype.delete=function(key, parent){
-    };
+};
 function insert(current, key, value) {
     if (current === null) return new Node(key, value);
     if (key > current.key) {
@@ -54,19 +54,18 @@ BinarySearchTree.prototype.search = function(key){
 };
 BinarySearchTree.prototype.delete = function (key){
     return this;
-
 };
 BinarySearchTree.prototype.contains= function(val){
 
     if(this.isEmpty()){
-   
+
         return false;
     }
-  
+
     return this._root.contains(val);
 };
 BinarySearchTree.prototype.traverse= function(order){
-
+    return this;
 };
 BinarySearchTree.prototype.verify = function () {
     return true;

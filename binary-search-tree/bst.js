@@ -22,7 +22,7 @@ function insert(current, key, value) {
 
 function BinarySearchTree() {
     this._root = null;
-    this.size = 0;
+    this.size =0;
 
     this.root = function(){
         return this._root.value;

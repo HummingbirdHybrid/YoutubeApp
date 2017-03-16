@@ -88,7 +88,7 @@ function isTriangle(a,b,c) {
     let arr = [];
 	arr.push(a, b, c);
 	arr.sort((x, y) => x - y);
-	return arr[0] + arr[1] > arr[2] ? true : false;
+	return arr[0] + arr[1] > arr[2];
 }
 
 
@@ -124,8 +124,11 @@ function isTriangle(a,b,c) {
  *   { top:20, left:20, width: 20, height: 20 }    =>  false
  *
  */
-function doRectanglesOverlap(rect1, rect2) {
-    throw new Error('Not implemented');
+function doRectanglesOverlap(a, b) {
+    return (a.left <= b.width &&
+    b.left <= a.width &&
+    a.top <= b.height &&
+    b.top <= a.height);
 }
 
 
@@ -321,36 +324,29 @@ function getDigitalRoot(num) {
  *   '{)' = false
  *   '{[(<{[]}>)]}' = true
  */
-function isBracketsBalanced(str) {
-    // let spec = {
-    //     '[': ']',
-    //     '{': '}',
-    //     '(': ')',
-    //     '<': '>'
-    // }
-    // if (str.length === 0) return true;
-    // if (str.length % 2 === 1) return false;
-    // let arr = str.split('');
-    // for (let i = 0; i < arr.length; i++) {
-    //     if (arr[i] in spec) {
-    //         let close = spec[arr[i]];
-    //         let index;//let index = arr.indexOf(close);
-    //         if (arr[arr.length - 1] !== close && arr[i + 1] !== close) return false;
-    //         else {
-    //             index = arr[i + 1] === close ? i + 1 : arr.length - 1;
-    //         }
-    //         if (index === -1 || index < i) return false;
-    //         else {
-    //             arr.splice(index, 1);
-    //             arr.splice(i, 1);
-    //             i = -1;
-    //         }
-    //     }
-    //     else return false;
-    // }
-    // return true;
-    throw new Error('Not implemented');
+function closedBracked(char, a) {
+    for (let i = 0; i < a.length; i++) {
+        if (a[i][0] == char) return a[i][1];
+    }
+    return 0;
+}
 
+function parenthesesAreBalancedFromYankovskii(string, parentheses) {
+    var stack = [], char = '', bracket;
+
+    for (let i = 0; i < string.length; i++) {
+        char = string[i];
+        bracket = closedBracked(char, parentheses);
+        if (bracket != 0 && stack[stack.length - 1] != char)
+            stack.push(bracket);
+        else if (stack.pop() != char)
+            return false;
+    }
+    return stack.length === 0;
+}
+function isBracketsBalanced(str) {
+ let config =  [['(', ')'], ['[', ']'], ['{', '}'],['<','>']];
+ return parenthesesAreBalancedFromYankovskii(str,config);
 }
 
 
@@ -471,7 +467,6 @@ function getCommonDirectoryPath(pathes) {
     throw new Error('Not implemented');
 }
 
-
 /**
  * Returns the product of two specified matrixes.
  * See details: https://en.wikipedia.org/wiki/Matrix_multiplication
@@ -490,8 +485,21 @@ function getCommonDirectoryPath(pathes) {
  *                         [ 6 ]]
  *
  */
-function getMatrixProduct(m1, m2) {
-    throw new Error('Not implemented');
+function getMatrixProduct(A, B) {
+    var rowsA = A.length, colsA = A[0].length,
+        rowsB = B.length, colsB = B[0].length,
+        C = [];
+    if (colsA != rowsB) return false;
+    for (var i = 0; i < rowsA; i++) C[i] = [];
+    for (var k = 0; k < colsB; k++)
+    { for (var i = 0; i < rowsA; i++)
+    { var t = 0;
+        for (var j = 0; j < rowsB; j++) t += A[i][j]*B[j][k];
+        C[i][k] = t;
+    }
+    }
+    return C;
+
 }
 
 
@@ -525,8 +533,34 @@ function getMatrixProduct(m1, m2) {
  *    [    ,   ,    ]]
  *
  */
-function evaluateTicTacToePosition(position) {
-    throw new Error('Not implemented');
+Array.prototype.Sum = function () {
+    let sum = 0;
+    for (let i = 0; i < this.length; i++)
+        sum += this[i];
+    return sum;
+}
+
+    Array.prototype.getColumn = function (col) {
+        let column = [];
+        for (let i = 0; i < this.length; i++) {
+            column.push(this[i][col]);
+        }
+        return column;
+    }
+function evaluateTicTacToePosition(F) {
+
+    for (let i = 0; i < 3; i++) {
+        if (F[i].Sum() == 3 || F[i].Sum() == -3) return F[i][0] == 1 ? 'x' : 'o';
+    }
+
+    for (let i = 0; i < 3; i++) {
+        if (F.getColumn(i).Sum() == 3 || F.getColumn(i).Sum() == -3) return F[0][i] == 1 ? 'x' : 'o';
+    }
+
+    if (F[1][1] === null) return null;
+    if ((F[0][0] === F[1][1] && F[0][0] === F[2][2]) || (F[0][2] === F[1][1] && F[0][2] === F[2][0])) return F[1][1] == 1 ? 'x' : 'o';
+
+    return undefined;
 }
 
 

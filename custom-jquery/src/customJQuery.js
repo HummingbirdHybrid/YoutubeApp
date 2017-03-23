@@ -27,13 +27,13 @@
               })
         };
 
-        append(element) {
-            if (type(element) == "String") return this.each(function () {
-                this.innerHTML += element;
+        append(element){
+            if(type(element)=="String") return this.each(function () {
+                this.innerHTML+=element;
             });
-            if (element.nodeName) return this.each(function () {
-                let node = document.createElement(element.nodeName);
-                node.innerText = element.innerText;
+            if(element.nodeName) return this.each(function () {
+                let node=document.createElement(element.tagName);
+                node.innerHTML=element.innerHTML;
                 this.appendChild(node);
             });
         }

@@ -14,9 +14,7 @@
 
         addClass(input) {
           if(type(input) == 'String' && input!='') return this.each(function(){
-                // Split our className property into an array of classes
                 var classes = this.className.split(/\s/);
-                // No need to do anything if the class is already there
                 if (classes.indexOf(input) > -1) return;
                 if (classes.length === 0) this.className = input;
                 this.className += " " + input;
@@ -37,11 +35,16 @@
                 this.appendChild(node);
             });
         }
-        html(){
-            throw new Error('Not implemented')
+        html(htmlString){
+            if(!htmlString) return this.DOM[0].innerHTML;
+            if(type(htmlString)=='String') this.each(function () {
+                this.innerHTML = htmlString;
+            })
         }
-        attr(){
-            throw new Error('Not implemented')
+        attr(attributeName, value ){
+            return value
+                ? this.each(x=>this.DOM[x].setAttribute(attributeName,value))
+                : this.DOM[0].getAttribute(attributeName);
         }
         children(){
             throw new Error('Not implemented')

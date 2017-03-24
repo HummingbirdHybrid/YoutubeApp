@@ -46,18 +46,50 @@
                 ? this.each(x=>this.DOM[x].setAttribute(attributeName,value))
                 : this.DOM[0].getAttribute(attributeName);
         }
-        children(){
-            throw new Error('Not implemented')
+        children(selector){
+            return selector
+                ? this.DOM[0].querySelectorAll(selector)
+                : this.DOM[0].children;
         }
-        css(){
-            throw new Error('Not implemented')
+        css(property, value){
+            if(type(property)=='String' && value) return this.each(function () {
+                    this.style[property]=value.toString();
+                }
+            );
+            if(type(property)=='String') return getComputedStyle(this.DOM[0])[property];
+            if(type(property)=='Object') return this.each(function () {
+                for(let i in property){
+                    this.style[i]=property[i];
+                }
+            })
         }
-        data(){
-            throw new Error('Not implemented')
+        data(key,value){
+            if(type(key)=='Object') return this.each(function () {
+                for(let i in key){
+                    this.dataset[i]=key[i];
+                }
+            })
+            if(key && value) return this.each(function () {
+                this.dataset[key]=value;
+            })
+            if(!key) return this.DOM[0].dataset;
+            else return this.DOM[0].dataset[key];
         }
-        on(){
-            throw new Error('Not implemented')
-        }
+
+        on(event,value,callback){
+            if(type(value)=='Function'){
+                return this.each(function () {
+                    this.addEventListener(event,value);
+                })
+            }
+
+            var children = this.children(value);
+                for(let i=0;i<children.length;i++){
+                    children[i].addEventListener(event,callback);
+                }
+                return children;
+            }
+
         one(){
             throw new Error('Not implemented')
         }

@@ -1,0 +1,861 @@
+html{
+    height: 100%;
+}
+body{
+    min-height: 100%;
+    position: relative;
+    background-color: #f9f9fb;
+}
+.flowPurification {
+    overflow: auto;
+}
+
+.flowPurification:after {
+    clear: both;
+    content: '';
+    display: table;
+}
+.top{
+    background-color: rgb(33, 36, 41);
+    width: 100%;
+    height: 345px;
+    display: inline-block;
+}
+.top header{
+    position: relative;
+    margin: 0 auto;
+    width: 1530px;
+    height: 35px;
+    top: 0;
+    padding-top: 20px;
+}
+
+.top header menu{
+    display: inline-block;
+    position: absolute;
+
+}
+
+.top header menu::before{
+    content: '';
+    position: absolute;
+    border: 0.5px solid rgb(46, 48, 60);
+    padding-top: 85%;
+    padding-bottom: 50%;
+    top: -22px;
+    right: -22px ;
+}
+.top header menu::after{
+    content: '';
+    position: absolute;
+    border: 0.5px solid rgb(46, 48, 60);
+    top: -22px;
+    left: 0;
+    padding-top: 137%;
+
+}
+.top header menu i:hover{
+    color: grey;
+    transition: 0.9s;
+    cursor: pointer;
+}
+.top header menu i{
+    float: left;
+    box-sizing: border-box;
+    width: 20px;
+    height: 13px;
+    margin-left: 20px;
+    margin-top: -5px;
+    font-size: 20.5px;
+    color: white;
+}
+
+.top header #logo{
+    margin: 0px auto 0 auto;
+    width: 151px;
+    height: 16px;
+    padding-left: 43px;
+}
+.top header #logo:hover{
+    transform: rotate(3deg);
+    white-space: nowrap;
+    cursor: pointer;
+}
+.top header h1{
+    display: inline;
+    position: absolute;
+    margin-top: -2px;
+    margin-left: 9px;
+    font-size: 22px;
+    letter-spacing: 4px;
+    font-family: "Hind";
+    color: rgb(254, 254, 254);
+    text-transform: uppercase;
+    text-align: left;
+}
+.top header aside{
+    float: right;
+    margin-top: -16px;
+    display: flex;
+}
+
+.top header aside::before{
+    content: '';
+    position: absolute;
+    border: 0.5px solid rgb(46, 48, 60);
+    top: 0;
+    padding-top: 53px;
+}
+
+.top header aside i{
+    padding: 0 21px 0 20px;
+    margin-top: -1px;
+}
+.top header aside i::after{
+    content: '';
+    position: absolute;
+    border: 0.5px solid rgb(46, 48, 60);
+    top: 0;
+    padding-top: 53px;
+    margin-left: 20px;
+}
+.top header aside i:hover{
+    color: grey;
+    cursor: pointer;
+}
+.top header aside .fa{
+    color: white;
+}
+.top header aside .fa-rss{
+    margin-right: 2px;
+}
+.top header aside .fa-twitter{
+    margin-top: -2px;
+    margin-right: 1px;
+}
+
+.top #banner{
+    position: relative;
+    margin: 0 auto;
+    width: 1530px;
+}
+.top #banner:hover{
+    cursor: pointer;
+}
+.top #banner > article{
+    font-family: "Hind";
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: uppercase;
+    line-height: 1.25;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.44);
+    position: absolute;
+    top: 265px;
+    left: 98px;
+    width: 513px;
+    letter-spacing: 6px;
+}
+article h2 {
+    font-size: 16px;
+    top: -36px;
+    position: absolute;
+    letter-spacing: 4.4px;
+    left: 2px;
+    text-transform: none;
+}
+#banner nav .boxDirection{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 44px;
+    top:46%;
+    right: 80px;
+    justify-content: space-between;
+}
+.top #banner nav > article{
+    position: absolute;
+    font-family: "Hind";
+    color: rgb(255, 255, 255);
+    line-height: 1.714;
+    height: 44px;
+    top:46%;
+    text-transform: uppercase;
+    -moz-transform: matrix( 0,-1,1,0,0,0);
+    -webkit-transform: matrix( 0,-1,1,0,0,0);
+    -ms-transform: matrix( 0,-1,1,0,0,0);
+    right: -40px;
+    letter-spacing: 2px;
+}
+.arrowUP::before{
+    content: "\27F6";
+    position: absolute;
+    right: -45px;
+    font-size: 26px;
+    top: -9px;
+}
+.arrowUP:hover::before{
+    color: darkgray;
+}
+.arrowDOWN::after{
+    content: "\27F5";
+    position: absolute;
+    left:  -45px;
+    font-size: 26px;
+    top: -9px;
+}
+.arrowDOWN:hover::after{
+    color: grey;
+}
+
+
+nav .box{
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    width: 6px;
+    height: 6px;
+}
+nav .box + .active{
+    background-color: rgb(153, 153, 153);
+}
+
+#newsletter{
+    height: 102px;
+    width: 1530px;
+    margin: 0 auto;
+    padding-bottom: 45px;
+    font-size: 20px;
+    font-family: "Montserrat";
+    color: rgb(33, 33, 33);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.4;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(247, 247, 247);
+}
+
+
+#newsletter h3{
+    margin-left: 30px;
+    margin-bottom: 7px;
+    width: 150px;
+    letter-spacing: 3.7px;
+    padding-right: 81px;
+}
+#newsletter input{
+    font-size: 15px;
+    font-family: "Hind";
+    color: rgb(153, 153, 153);
+    text-transform: uppercase;
+    line-height: 1.867;
+    height: 45%;
+    width: 29%;
+    text-indent: 26px;
+    letter-spacing: 1.5px;
+    padding: 0;
+
+    margin-right: 32px;
+}
+#newsletter button{
+    font-size: 14px;
+    font-family: "Hind";
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    line-height: 1.714;
+    letter-spacing: 3px;
+    width: 283px;
+    height: 51px;
+    padding: 0;
+    box-shadow: 0px 0px 1px 0px rgba(232, 232, 232, 0.21);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(221, 221, 221);
+    background-color: rgb(33, 33, 33);
+    text-indent: 3px;
+}
+#newsletter button:hover{
+    cursor: pointer;
+    background-color: darkturquoise;
+    color: black;
+}
+
+
+
+
+
+footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 412px;
+    background-color: rgb(33, 36, 41);
+}
+footer #footerContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 412px;
+    width: 1530px;
+}
+footer .footer-item{
+    padding-top: 53px;
+    height: 361px;
+    width: 361px;
+}
+footer #about #sign {
+    background-color: rgb(58, 60, 73);
+    width: 361px;
+    height: 147px;
+    position: relative;
+}
+footer #about #sign:hover{
+    cursor: pointer;
+    box-shadow: 0px 1px 3px 0px rgba(213, 213, 213, 0.75);
+}
+#sign>h3{
+    font-size: 40px;
+    font-family: "Mrs Saint Delafield";
+    color: rgb(249, 249, 251);
+    line-height: 0.6;
+    text-align: left;
+    -moz-transform: matrix( 0.89071332367522,-0.13764529365174,0.13764529365174,0.89071332367521,0,0);
+    -webkit-transform: matrix( 0.89071332367522,-0.13764529365174,0.13764529365174,0.89071332367521,0,0);
+    -ms-transform: matrix( 0.89071332367522,-0.13764529365174,0.13764529365174,0.89071332367521,0,0);
+    position: absolute;
+    top: 104px;
+    right: 9px;
+    letter-spacing: 0.35px;
+}
+
+
+
+footer h2{
+    font-size: 16px;
+    font-family: "Montserrat";
+    color: rgb(249, 249, 251);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.75;
+    text-align: left;
+    letter-spacing: 0.9px;
+    padding-bottom: 24.1px;
+
+}
+footer h3{
+    font-size: 14px;
+    font-family: "Hind","FontAwesome";
+    color: rgb(249, 249, 251);
+    line-height: 1.714;
+    text-align: left;
+    letter-spacing: 1.36px;
+    padding-bottom: 10px;
+
+}
+footer h4{
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    line-height: 1.714;
+    letter-spacing: 1.5px;
+    padding-bottom: 9px;
+}
+
+
+
+footer p{
+    font-size: 15px;
+    font-family: "Hind";
+    color: rgb(249, 249, 251);
+    line-height: 1.867;
+    text-align: left;
+    letter-spacing: 1.374px;
+}
+footer #about{
+
+}
+
+footer #tweets{
+
+}
+#tweets  p{
+    padding-left: 21px;
+    padding-bottom: 21px;
+}
+footer .tweet-blog{
+
+}
+.tweet-blog h3:hover{
+    cursor: pointer;
+    color: blueviolet;
+}
+footer #instagram{
+
+}
+#instagram .grid{
+    display: grid;
+    grid-template-columns: 119px 119px 119px;
+    grid-template-rows: 98px 98px;
+
+    background-color: rgb(249, 249, 251);
+    margin-top: 5px;
+}
+
+#instagram .grid .photo{
+    background-color: white;
+    border: 1px solid black;
+}
+#instagram .grid .photo:hover{
+    cursor: zoom-in;
+}
+#instagram .grid .photo:active{
+    -webkit-transform: scale(2.4);
+    -moz-transform: scale(2.4);
+    -ms-transform: scale(2.4);
+    -o-transform: scale(2.4);
+    transform: scale(2.4);
+}
+footer #comments{
+    font-family: "Open Sans";
+}
+#comments p {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    line-height: 1.714;
+}
+
+footer #downbar{
+    background-color: rgb(23, 25, 28);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 41px;
+    width: 100%;
+}
+#downbar p {
+    font-size: 14px;
+    font-family: "Hind";
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 1.714;
+    text-transform: uppercase;
+    letter-spacing: 1.29px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+#downbar .slasher{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.devider{
+    border-width: 1px;
+    border-color: rgb(204, 204, 204);
+    border-style: solid;
+    opacity: 0.4;
+    width: 356px;
+    height: 0;
+    margin-top: 23px;
+    margin-bottom: 23px;
+}
+
+
+main{
+    padding: 0 25px 470px 25px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f9f9fb;
+}
+
+
+main .post-placeholder{
+    display: flex;
+    width: 362px;
+    flex-direction: column;
+}
+.post-placeholder > .post {
+    margin-top: 26px;
+}
+
+
+.post {
+    position: relative;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    border: 1px rgb(215, 215, 215) solid;
+
+}
+.empty-post{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(221, 221, 221);
+    background-color: rgb(255, 255, 255);
+    width: 358px;
+    height: 511px;
+}
+.text-post{
+    padding-top: 55px;
+}
+.text-post::before{
+    font-family: "FontAwesome";
+    content: "\f040";
+    background-color: rgb(33, 33, 33);
+    position: absolute;
+    color: white;
+    top: -15px;
+    left: 45%;
+    font-size: 19px;
+    padding: 8px 10px 8px 10px;
+}
+.bg-post{
+    padding-top: 36px;
+    background: url("../img/Layer 43.png") no-repeat;
+    border: none;
+}
+.bg-post h2 {
+    padding-top: 5px;
+}
+
+.image-post::before{
+    font-family: "FontAwesome";
+    content: "\f03e";
+    bottom: 51%;
+    background-color: rgb(33, 33, 33);
+    position: absolute;
+    color: white;
+    bottom: 51%;
+    left: 45%;
+    font-size: 19px;
+    padding: 8px 10px 8px 10px;
+}
+
+.image-post > img {
+    width: 358px;
+    height: 254px;
+    padding-bottom: 55px;
+}
+.post-placeholder .quote-post{
+    background: black;
+    margin-top: 40px;
+
+    padding-top: 40px;
+}
+.post +.quote-post p{
+    letter-spacing: 2.5px;
+    padding-bottom: 23px;
+    color: white;
+}
+.post +.quote-post h3{
+    padding-bottom: 30px;
+    color: #999999;
+}
+.quote-post::before{
+    font-family: "FontAwesome";
+    content: "\f10d";
+    box-shadow: 0px 1px 3px 0px rgba(213, 213, 213, 0.75);
+    background-color: rgb(33, 33, 33);
+    position: absolute;
+    color: white;
+    top: -15px;
+    left: 45%;
+    font-size: 19px;
+    padding: 8px 10px 8px 10px;
+}
+.post +.video-post{
+    margin-top: 45px;
+}
+.video-post::before{
+    font-family: "FontAwesome";
+    content: "\f008";
+    background-color: rgb(33, 33, 33);
+    position: absolute;
+    color: white;
+    top: -3%;
+    left: 45%;
+    font-size: 19px;
+    padding: 8px 10px 8px 10px;
+}
+.video-post>p{
+    padding-bottom: 28px;
+}
+.video-player{
+    padding-bottom: 33px;
+}
+.video-player > .video{
+    background-color: rgb(244, 244, 244);
+    width: 358px;
+    height: 225px;
+}
+.video-player > .toolbar{
+    background-color: rgb(0, 0, 0);
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    height: 32px;
+    color: white;
+    padding-left: 19px;
+    padding-right: 19px;
+}
+.toolbar>.rewind{
+    background-color: rgb(255, 255, 255);
+    width: 171px;
+    height: 5px;
+    margin-left: 20px;
+    margin-right: 15px;
+}
+.toolbar>.rewind:hover{
+    cursor: pointer;
+}
+.rewind>.progress{
+    background-color: rgb(255, 13, 26);
+    width: 90px;
+    height: 5px;
+}
+.video-player .toolbar p{
+    font-family: "Roboto";
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 0;
+}
+.toolbar i {
+    margin-left: 25px;
+}
+.toolbar i:hover {
+    cursor: pointer;
+    color: #999999;
+}
+
+.fa-pause:hover::before{
+    cursor: pointer;
+    color: gray;
+    content: "\f04b";
+}
+
+.gallery-post::before{
+    font-family: "FontAwesome";
+    content: "\f03e";
+    background-color: rgb(33, 33, 33);
+    position: absolute;
+    color: white;
+    bottom: 51.5%;
+    left: 44.5%;
+    font-size: 19px;
+    padding: 8px 10px 8px 10px;
+}
+
+.gallery-post  .gallery-grid {
+    width: 358px;
+    height: 254px;
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns:179px 179px;
+    grid-template-rows: 126px 126px;
+}
+.post + .link-post {
+    margin-top: 44px;
+    padding-bottom: 61px;
+    padding-top: 61px;
+    border: none;
+    background-color: rgb(33, 36, 41);
+}
+.link-post::before{
+    font-family: "FontAwesome";
+    content: "\f0c1";
+    position: absolute;
+    color: black;
+    top: -10%;
+    background: white;
+    left: 44.5%;
+    font-size: 19px;
+    padding: 8px 10px 8px 10px;
+}
+.post + .unknown-post{
+    margin-top: 46px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(221, 221, 221);
+    background-color: rgb(33, 36, 41);
+    width: 358px;
+    height: 287px;
+}
+.unknown-post::before{
+    font-family: "FontAwesome";
+    content: "\f17a";
+    position: absolute;
+    color: black;
+    top: -6%;
+    background: white;
+    left: 44.5%;
+    font-size: 19px;
+    padding: 8px 10px 8px 10px;
+}
+
+.link-post a {
+    font-size: 17px;
+    font-family: "Hind";
+    text-decoration: underline;
+    line-height: 1.647;
+    text-align: center;
+    color: white;
+    letter-spacing: 1.5px;
+}
+
+
+.gallery-grid .image {
+    background-color: white;
+    border: 1px solid #f2f2f2;
+}
+
+.gallery-grid .image:hover{
+    cursor: pointer;
+    box-shadow: 0px 1px 3px 0px gray;
+    transform: scale(1.35);
+}
+.post +.music-post{
+    padding-top: 55px;
+    margin-top: 57px;
+    height: 400px;
+}
+
+
+.music-post > button{
+    border-radius: 50%;
+    background-color: rgb(153, 153, 153);
+    width: 135px;
+    height: 135px;
+}
+
+
+.music-post::before{
+    font-family: "FontAwesome";
+    content: "\f001";
+    box-shadow: 0px 1px 3px 0px rgba(213, 213, 213, 0.75);
+    background-color: rgb(33, 33, 33);
+    position: absolute;
+    color: white;
+    top: -15px;
+    left: 45%;
+    font-size: 19px;
+    padding: 8px 10px 8px 10px;
+}
+
+.post h2{
+    font-size: 20px;
+    font-family: "Montserrat";
+    color: rgb(33, 33, 33);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: 1px;
+    padding-top: 2px;
+    padding-bottom: 8px;
+}
+.post h3{
+    font-size: 14px;
+    font-family: "Hind";
+    color: rgb(153, 153, 153);
+    text-transform: uppercase;
+    line-height: 1.714;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+.post p {
+    margin-top: 15px;
+    font-size: 15px;
+    font-family: "Hind";
+    color: rgb(70, 70, 70);
+    line-height: 1.867;
+    text-align: center;
+    margin-left: 24px;
+    margin-right: 24px;
+    letter-spacing: 1.5px;
+}
+.post button{
+    font-family: "Hind";
+    font-size: 14px;
+    color: rgb(33, 33, 33);
+    text-transform: uppercase;
+    line-height: 1.714;
+    border: none;
+    background-color: inherit;
+    border-right: 1px rgb(215, 215, 215) solid;
+    border-left: 1px rgb(215, 215, 215) solid;
+    width: 128px;
+    margin: 0 auto;
+    margin-bottom: 42px;
+    margin-top: 33px;
+    letter-spacing: 3px;
+}
+.bg {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(221, 221, 221);
+    background-color: rgb(255, 255, 255);
+    opacity: 0.15;
+    box-shadow: 0px 3px 25.52px 3.48px rgba(112, 112, 112, 0.49);
+    position: absolute;
+    left: 834px;
+    top: 1240px;
+    width: 358px;
+    height: 553px;
+    z-index: 156;
+}
+
+.post:hover{
+    box-shadow: 0px 3px 25.52px 3.48px rgba(112, 112, 112, 0.49);
+}
+
+.post button:hover{
+    cursor: pointer;
+    background-color: gainsboro;
+}
+.post button:active{
+    box-shadow: 0px 3px 25.52px 3.48px rgba(112, 112, 112, 0.49);
+}
+
+.social-content{
+    font-family: "Hind", "FontAwesome";
+    border-top: 3px rgb(215, 215, 215) solid;
+    max-width: 100%;
+
+    letter-spacing: 0.5px;
+
+    padding-top: 21px;
+    padding-bottom: 21px;
+    padding-left: 31px;
+    padding-right: 31px;
+}
+
+.comment-wrapper{
+    display: inline-block;
+}
+.comment-wrapper:hover{
+    cursor: pointer;
+    color: darkcyan;
+}
+.social-wrapper{
+    font-size: 16px;
+    letter-spacing: 18px;
+    margin-left: 0px;
+    margin-right: -16px;
+    float: right;
+}
+.social-wrapper i:hover{
+    cursor: pointer;
+    color: blue;
+}

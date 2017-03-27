@@ -3,6 +3,7 @@
         if(DOM.nodeName) return new JQ([DOM]);
         return new JQ(document.querySelectorAll(DOM));
     };
+
     function type(obj) {
         return Object.prototype.toString.call(obj).slice(8, -1);
     }
@@ -82,20 +83,29 @@
                     this.addEventListener(event,value);
                 })
             }
-
-            var children = this.children(value);
-                for(let i=0;i<children.length;i++){
-                    children[i].addEventListener(event,callback);
-                }
-                return children;
+            if(type(value)=='String') {
+                this.DOM[0].addEventListener(event, (e, ...args) => {
+                   if (Array.from($(value).DOM).indexOf(e.target)!=-1){
+                        callback(...args);
+                    }
+                });
+                return this;
             }
 
-        one(){
-            throw new Error('Not implemented')
+            }
+
+        one(event,callback){
+            const that = this;
+            function clickOnce(...args) {
+                callback(...args);
+                that.DOM[0].removeEventListener(event, clickOnce);
+            }
+            this.DOM[0].addEventListener(event, clickOnce);
+            return this;
         }
         each(callback) {
             for (var i = 0; i < this.DOM.length; i++) {
-                callback.call(this.DOM[i], i);
+              if (callback.call(this.DOM[i], i,this.DOM[i])===false) return false;
             }
             return this;
         }

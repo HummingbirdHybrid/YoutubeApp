@@ -1,0 +1,18 @@
+@import "variables";
+@mixin bg-mg($img,$pos: center center,$att:scroll){
+  background:{
+    image: url($img-folder + $img);
+    position: $pos;
+    repeat: no-repeat;
+    size: cover;
+    attachment: scroll;
+  }
+}
+@mixin add-font($font-url,$font-name,$font-weight:normal,$font-style:normal){
+  font:{
+    family: $font-name;
+    weight: $font-weight;
+    style: $font-style;
+  }
+  src: url($font-folder + $font-url) format('woff');
+}

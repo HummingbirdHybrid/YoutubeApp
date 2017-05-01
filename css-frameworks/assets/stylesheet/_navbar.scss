@@ -1,17 +1,11 @@
 @import "variables";
-@import "mixin";
 .site-header{
   font-weight: bold;
-}
-.navbar-nav > li {
-  padding-right: 15px;
-  letter-spacing: 0.2px;
 }
 .navbar > .container .navbar-brand{
   display: flex;
   align-items: center;
-  padding-right: 74px;
-  margin-left: -30px; // pixel-perfect -- no var i in sass
+  padding-right: 75px;
 }
 @media only screen and (max-width: 768px) and (min-width: 0px){
   .navbar > .container .navbar-brand{

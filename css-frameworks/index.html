@@ -287,9 +287,14 @@
                                         <h4 class="modal-title">Subscribe now</h4>
                                     </div>
                                     <div class="modal-body">
-                                        <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="your mail">
+                                        <div class="input-group">
+                                            <span class="input-group-addon" id="basic-addon1">@</span>
+                                            <input type="text" class="form-control" placeholder="your mail" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="other contacts"  aria-describedby="basic-addon3">
+                                        </div>
                                     </div>
                                     <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Confirm</button>
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                     </div>
                                 </div>

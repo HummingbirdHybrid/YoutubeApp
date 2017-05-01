@@ -1,5 +1,5 @@
 @import "variables";
-@import "mixin";
+
 
 .hero.container-fluid{
   margin-top: 110px;
@@ -40,25 +40,10 @@
     border-radius: 2px;
   }
 }
-.carousel-control.left span:hover{
-  margin-left: -25px;
-}
+
 .carousel-control{
   font-size: 30px;
-  opacity: 1;
-  &:hover{
-    opacity: 1;
-  }
-  +.right{
-    span:hover{
-      margin-right: -25px;
-    }
-  }
-  +.left{
-    span:hover{
-      margin-left: -25px;
-    } // doesnt work for some reason
-  }
+
   span{
     &:hover{
       width: 60px;
@@ -152,9 +137,6 @@
   height: 65px;
   justify-content: center;
   align-items: center;
-  background-image: none;
-  border: none;
-  background-color: $active-color;
   margin-top: 70px;
   @media only screen and (max-width: 600px) and (min-width: 0px){
     margin-top: 0;

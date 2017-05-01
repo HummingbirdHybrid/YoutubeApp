@@ -1,15 +1,10 @@
 .site-header {
   font-weight: bold; }
 
-.navbar-nav > li {
-  padding-right: 15px;
-  letter-spacing: 0.2px; }
-
 .navbar > .container .navbar-brand {
   display: flex;
   align-items: center;
-  padding-right: 74px;
-  margin-left: -30px; }
+  padding-right: 75px; }
 
 @media only screen and (max-width: 768px) and (min-width: 0px) {
   .navbar > .container .navbar-brand {
@@ -60,18 +55,8 @@
     top: -55%;
     border-radius: 2px; }
 
-.carousel-control.left span:hover {
-  margin-left: -25px; }
-
 .carousel-control {
-  font-size: 30px;
-  opacity: 1; }
-  .carousel-control:hover {
-    opacity: 1; }
-  .carousel-control + .right span:hover {
-    margin-right: -25px; }
-  .carousel-control + .left span:hover {
-    margin-left: -25px; }
+  font-size: 30px; }
   .carousel-control span:hover {
     width: 60px;
     height: 60px;
@@ -135,9 +120,6 @@
   height: 65px;
   justify-content: center;
   align-items: center;
-  background-image: none;
-  border: none;
-  background-color: #00bc9c;
   margin-top: 70px; }
   @media only screen and (max-width: 600px) and (min-width: 0px) {
     .carousel-button {
@@ -218,10 +200,6 @@ main {
         color: white;
         padding: 10px;
         background: #c9d2da; }
-        main .latest-works .pagination span:hover {
-          cursor: pointer;
-          background-color: #506a85;
-          color: #17a78b; }
   main .get-in-touch h3 + p {
     font-size: 22px;
     line-height: 30px; }
@@ -280,10 +258,6 @@ footer {
     margin-left: 10px; }
   footer a {
     color: #a3b1bf; }
-    footer a:hover {
-      color: #17a78b;
-      cursor: pointer;
-      text-decoration: none; }
   footer .contacts {
     margin-top: 15px;
     display: flex;
@@ -291,13 +265,9 @@ footer {
     footer .contacts a span {
       margin: 0 10px 0 0; }
   footer .subscribe button {
-    font-weight: bold;
     position: absolute;
     right: 3px;
     top: 3px; }
-    footer .subscribe button:hover {
-      color: white;
-      background-color: #17a78b; }
   footer .subscribe input {
     width: 270px;
     height: 40px;
@@ -305,8 +275,6 @@ footer {
     border: 0;
     border-radius: 5px;
     text-indent: 10px; }
-    footer .subscribe input:hover {
-      background-color: #596675; }
 
 .gallery {
   display: grid;

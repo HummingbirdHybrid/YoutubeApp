@@ -153,6 +153,9 @@ input::-moz-focus-inner {
 input {
   line-height: normal;
 }
+input:hover{
+ background-color: #596675 !important;
+}
 input[type="checkbox"],
 input[type="radio"] {
   -webkit-box-sizing: border-box;
@@ -1108,8 +1111,10 @@ a {
 }
 a:hover,
 a:focus {
-  color: #23527c;
-  text-decoration: underline;
+  color: #17a78b;
+cursor: pointer;
+text-decoration: none;
+
 }
 a:focus {
   outline: 5px auto -webkit-focus-ring-color;
@@ -3065,8 +3070,6 @@ fieldset[disabled] a.btn {
   color: white;
   font-family: "Source Sans Pro";
   font-size: 14px;
-  background-color: #ffffff;
-  border-color: #cccccc;
   background-color: #00bc9c;
   font-weight: bold;
   background-image: none !important;
@@ -3089,6 +3092,12 @@ fieldset[disabled] a.btn {
   background-color: #e6e6e6;
   border-color: #adadad;
 }
+main .latest-works .pagination span:hover {
+    cursor: pointer;
+    background-color: #506a85;
+    color: #17a78b;
+}
+
 .btn-default:active:hover,
 .btn-default.active:hover,
 .open > .dropdown-toggle.btn-default:hover,
@@ -3989,6 +3998,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li {
   position: relative;
   display: block;
+  padding-right: 15px;
+	letter-spacing: 0.2px;
 }
 .nav > li > a {
   position: relative;
@@ -4298,7 +4309,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
-    margin-left: -15px;
+    margin-left: -30px;
   }
 }
 .navbar-toggle {
@@ -4908,38 +4919,27 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   left: 0;
   bottom: 0;
   width: 15%;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
   font-size: 20px;
   color: #ffffff;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  background-color: rgba(0, 0, 0, 0);
 }
 .carousel-control.left {
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+}
+.carousel-control.left span:hover{
+  margin-left: -25px;
 }
 .carousel-control.right {
   left: auto;
   right: 0;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+}
+.carousel-control.right span:hover{
+  margin-right: -25px;
 }
 .carousel-control:hover,
 .carousel-control:focus {
   outline: 0;
   color: #ffffff;
   text-decoration: none;
-  opacity: 0.9;
   filter: alpha(opacity=90);
 }
 .carousel-control .icon-prev,
@@ -4977,11 +4977,10 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .carousel-indicators {
   position: absolute;
-  bottom: 10px;
-  left: 50%;
+  bottom: -7.5px;
   z-index: 15;
-  width: 60%;
-  margin-left: -30%;
+  width: 150px;
+  margin-left: -75px;
   padding-left: 0;
   list-style: none;
   text-align: center;
@@ -5032,6 +5031,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .icon-prev {
     margin-left: -10px;
+    color: white;
+    opacity: 1;
+    /*! opacity: 0; */
   }
   .carousel-control .glyphicon-chevron-right,
   .carousel-control .icon-next {

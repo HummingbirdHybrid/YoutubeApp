@@ -1,5 +1,5 @@
 @import "variables";
-@import "mixin";
+
 
 main {
   color: $text-main-color;
@@ -98,11 +98,6 @@ main {
         color: white;
         padding: 10px;
         background: #c9d2da;
-        &:hover {
-          cursor: pointer;
-          background-color: $passive-color;
-          color: $hover-color;
-        }
       }
     }
   }

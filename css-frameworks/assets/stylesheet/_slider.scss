@@ -1,0 +1,168 @@
+@import "variables";
+@import "mixin";
+
+.hero.container-fluid{
+  margin-top: 110px;
+  padding: 0;
+}
+.carousel-indicators {
+  bottom: -7.5px;
+  display: flex;
+  margin: 0;
+  margin-left: -75px;
+  width: 150px;
+  left: 50%;
+  li{
+    background-color: $passive-color;
+    border-color: $passive-color;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    &.active{
+      background-color: $active-color;
+      border-color: $active-color;
+      width: 15px;
+      height: 15px;
+      margin: 1px;
+      margin-left: 10px;
+    }
+  }
+  &::before{
+    content: " ";
+    background-color: white;
+    width: 180px;
+    height: 150%;
+    position: absolute;
+    z-index: -1;
+    left: -20px;
+    bottom: 0;
+    top: -55%;
+    border-radius: 2px;
+  }
+}
+.carousel-control.left span:hover{
+  margin-left: -25px;
+}
+.carousel-control{
+  font-size: 30px;
+  opacity: 1;
+  &:hover{
+    opacity: 1;
+  }
+  +.right{
+    span:hover{
+      margin-right: -25px;
+    }
+  }
+  +.left{
+    span:hover{
+      margin-left: -25px;
+    } // doesnt work for some reason
+  }
+  span{
+    &:hover{
+      width: 60px;
+      height: 60px;
+      padding-top: 15px;
+      margin-top: -25px;
+      color: $hover-color;
+      background-color: $passive-color;
+    }
+  }
+}
+
+.carousel-item{
+  &.center{
+    .carousel-button{
+      align-self: center;
+    }
+  }
+  &.right{
+    width: 50%;
+    left: 30%;
+    p{
+      color: white;
+    }
+    .carousel-button{
+      align-self: flex-end;
+    }
+  }
+  &.left{
+    width: 50%;
+    right: 30%;
+  }
+  &.top{
+    height: 70%;
+  }
+  &.center.top{
+    width: 45%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+  }
+  justify-content: center;
+  position: absolute;
+  display: flex;
+  top: 0;
+  height: 100%;
+  font-family: "Lato";
+  flex-direction: column;
+
+  p{
+    color: $text-slider-color;
+    letter-spacing: 3px;
+    font-size: 17px;
+
+  }
+  h2{
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+  }
+  span{
+    background-color: $passive-color;
+  }
+  @media only screen and (max-width: 768px) and (min-width: 0px){
+
+    h2{
+      font-size: 200%;
+    }
+    p{
+      font-size: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) and (min-width: 0px){
+
+    h2{
+      font-size: 20px;
+    }
+    p{
+      display: none;
+    }
+  }
+}
+
+
+.carousel-button{
+  color: white;
+  font-weight: bold;
+  display: flex;
+  width: 295px;
+  height: 65px;
+  justify-content: center;
+  align-items: center;
+  background-image: none;
+  border: none;
+  background-color: $active-color;
+  margin-top: 70px;
+  @media only screen and (max-width: 600px) and (min-width: 0px){
+    margin-top: 0;
+    width: 150px;
+    height: 45px;
+  }
+  &:hover{
+    color: white;
+    background-color: $hover-color;
+  }
+}

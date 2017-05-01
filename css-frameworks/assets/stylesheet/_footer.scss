@@ -1,0 +1,94 @@
+@import "variables";
+footer{
+  background-color: $footer-bg;
+  color:  $footer-text-color;
+  .footer{
+    padding-top: 75px;
+    .footer-logo{
+      margin-bottom: 25px;
+    }
+  }
+  h6{
+    font-family: Lato;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+  p{
+    font-family: "Source Sans Pro";
+    font-size: 14px;
+    color: $footer-text-color;
+  }
+  span{
+    margin-left: 10px;
+  }
+  a{
+    color: $footer-text-color;
+    &:hover {
+      color: $hover-color;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+  .contacts{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    a{
+      span{
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+  .subscribe{
+    button{
+      font-weight: bold;
+      position: absolute;
+      right: 3px;
+      top: 3px;
+      &:hover{
+        color: white;
+        background-color: $hover-color;
+      }
+    }
+    input{
+      width: 270px;
+      height: 40px;
+      background-color: #4e5c6c;
+      border: 0;
+      border-radius: 5px;
+      text-indent: 10px;
+      &:hover{
+        background-color: #596675;
+      }
+    }
+  }
+}
+.gallery{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  .photo{
+    &:hover{
+      background-image: none;
+    }
+    margin: 2.5px;
+  }
+}
+
+.footer-nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80px ;
+  background-color: #283645;
+  .copyrights{
+    float: left;
+  }
+  .list-inline{
+    float: right;
+  }
+  .list-inline{display:block;}
+  .list-inline li{display:inline-block;}
+  .list-inline li:before{content:"\2022";; margin:0 10px;}
+}

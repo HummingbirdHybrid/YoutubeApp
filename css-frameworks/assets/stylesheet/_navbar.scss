@@ -13,6 +13,13 @@
   padding-right: 74px;
   margin-left: -30px; // pixel-perfect -- no var i in sass
 }
+@media only screen and (max-width: 768px) and (min-width: 0px){
+  .navbar > .container .navbar-brand{
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+  }
+}
 @media only screen and (max-width: 1200px) and (min-width: 768px)  {
   .navbar > .container .navbar-brand{
     padding: 0;
@@ -22,13 +29,4 @@
     padding: 0;
     letter-spacing: 0;
   }
-}
-.search{
-  margin-top: 6px;
-  color: rgb(80, 106, 133);
-  cursor: pointer;
-}
-.search:hover{
-  margin-top: 6px;
-  color: #333333
 }

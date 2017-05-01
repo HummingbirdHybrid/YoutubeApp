@@ -8,12 +8,12 @@
     <script src="assets/jquery/jquery-3.2.1.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.min.css">
+
     <link rel="stylesheet" href="assets/stylesheet/entry.css">
 </head>
 <body>
-<header >
-    <nav class="navbar navbar-default navbar-static-top ">
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top ">
         <div class="container site-header ">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -26,34 +26,370 @@
                 </a>
             </div>
 
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav text-uppercase">
-                        <li><a href="#home">home</a></li>
-                        <li><a href="#portfolio">portfolio</a></li>
-                        <li><a href="#blog">blog</a></li>
-                        <li><a href="#pages">pages</a></li>
-                        <li><a href="#features">features</a></li>
-                        <li><a href="#mega menu">mega menu</a></li>
-                        <li><a href="#contact">contact</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" class="glyphicon glyphicon-search"></a></li>
-                    </ul>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav text-uppercase">
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#portfolio">portfolio</a></li>
+                    <li><a href="#blog">blog</a></li>
+                    <li><a href="#pages">pages</a></li>
+                    <li><a href="#features">features</a></li>
+                    <li><a href="#mega menu">mega menu</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" class="glyphicon glyphicon-search"></a></li>
+                </ul>
 
             </div>
         </div>
     </nav>
 </header>
-<div class="jumbotron text-center">
-    <h1>
-        <span>made for designers</span>
-    </h1>
-    <h2>
-            <span >
-                Create your online portfolio in minutes with the professionally and lovingly designed REEN website
-                template. Customize your site with versatile and easy to use features.
-            </span>
-    </h2>
-</div>
+
+<main>
+    <div class="hero container-fluid">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="assets/images/slide1.png" alt="...">
+                    <div class="carousel-caption carousel-item center">
+                        <h2 class="text-uppercase">made for designers</h2>
+                        <p>Create your online portfolio in minutes with the professionally and lovingly designed REEN
+                            website template. Customize your site with versatile and easy to use features.</p>
+                        <div class="btn text-uppercase btn-default carousel-button">get started now</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="assets/images/slide2.png" alt="...">
+                    <div class="carousel-caption carousel-item right ">
+                        <h2 class="text-uppercase text-right">fresh and beautiful design</h2>
+                        <p class="text-right"> REEN is designed to showcase your talent and put your work in the
+                            forefront. Professionally use of typography and layout that fits your content.</p>
+                        <div class="btn text-uppercase btn-default carousel-button">get started now</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="assets/images/slide3.png" alt="...">
+                    <div class="carousel-caption carousel-item left ">
+                        <h2 class="text-uppercase text-left"><span>Clean and reusable code</span></h2>
+                        <p class="text-left"> The clean code allows you to easily copy code blocks from content modules
+                            and
+                            past them in different places or layouts.</p>
+                        <div class="btn text-uppercase btn-default carousel-button">get started now</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="assets/images/slide4.png" alt="...">
+                    <div class="carousel-caption carousel-item right top">
+                        <h2 class="text-uppercase text-right"><span>Just focus on your creativity</span></h2>
+                        <p class="text-right"> Take a break from messing around with heavy coding and spend your time
+                            brainstorming ideas for your next project.</p>
+                        <div class="btn text-uppercase btn-default carousel-button">get started now</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="assets/images/slide5.png" alt="...">
+                    <div class="carousel-caption carousel-item center top">
+                        <h2 class="text-uppercase">Showcase your content</h2>
+                        <p>With REEN you have the possibility to create websites for various contents quickly and
+                            easily.
+                            Now it's up to you!</p>
+                        <div class="btn text-uppercase btn-default carousel-button">get started now</div>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+
+    <div class="who-are-we container headed">
+        <div class="row">
+            <div class="container headed">
+                <div class="col-lg-8 col-md-8 col-xs-12 col-md-offset-2 text-center ">
+                    <h3 class="text-capitalize">Beautiful. Clean. Responsive.</h3>
+                    <p>REEN is a high-quality solution for those who want a beautiful website in no time. It's fully
+                        responsive
+                        and will adapt itself to any mobile device. iPad, iPhone, Android, it doesn't matter. Your
+                        content will
+                        always looks its absolute best.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 col-xs-12 icon"><span class="glyphicon glyphicon-heart"></span></div>
+            <div class="col-md-3 ">
+
+                <h4>Passion</h4>
+                <p>
+                    Magnis modipsae que lib voloratati andigen daepeditem quiate re porem aut labor. Laceaque quiae
+                    sitiorem rest non restibusaes maio es dem tumquam core posae volor remped modis volor
+                </p>
+            </div>
+            <div class="col-md-1 icon "><span class="glyphicon glyphicon-lamp"></span></div>
+            <div class="col-md-3 ">
+
+                <h4>Creativity</h4>
+                <p>
+                    Magnis modipsae que lib voloratati andigen daepeditem quiate re porem aut labor.
+                    Laceaque quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped modis
+                    volor.
+                </p>
+            </div>
+            <div class="col-md-1 icon"><span class="glyphicon glyphicon-star"></span></div>
+            <div class="col-md-3">
+
+                <h4>Quality</h4>
+                <p>
+                    Magnis modipsae que lib voloratati andigen daepeditem quiate re porem aut labor.
+                    Laceaque quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped modis
+                    volor.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="latest-works container-fluid">
+        <div class="container headed text-center">
+            <h3>Check our latest work.</h3>
+            <p>Magnis modipsae que voloratati andigen daepeditem quiate re porem aut labor.</p>
+            <div class="row headed works">
+                <div class="col-md-6 col-xs-12">
+                    <figure class="text-center">
+                        <div class="hover-item">
+                            <img class="img-responsive" src="assets/images/figure1.png" alt="grand motel"/>
+                            <div class="hover-overlay">
+                                <div class="item-text">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <figcaption>
+                            <h5>
+                                Grand Motel gets an identity brushup
+                            </h5>
+                            <p>
+                                Identity
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <figure>
+                        <div class="hover-item">
+                            <img class="img-responsive" src="assets/images/figure2.png" alt="grand motel"/>
+                            <div class="hover-overlay">
+                                <div class="item-text">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <figcaption>
+                            <h5>
+                                Fresh branding for a creative startup
+                            </h5>
+                            <p>
+                                Identity
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+
+            <div class="row headed">
+                <div class="false-slider">
+                    <div class="col-md-3 col-xs-6">
+                        <div class="hover-item">
+                            <img class="img-responsive" src="assets/images/item1.png">
+                            <div class="hover-overlay">
+                                <div class="item-text">
+                                    <h5>Astor&Yancy</h5>
+                                    <p>Identity</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="hover-item">
+                            <img class="img-responsive" src="assets/images/item2.png">
+                            <div class="hover-overlay">
+                                <div class="item-text">
+                                    <h5>Astor&Yancy</h5>
+                                    <p>Identity</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="hover-item">
+                            <img class="img-responsive" src="assets/images/item3.png">
+                            <div class="hover-overlay">
+                                <div class="item-text">
+                                    <h5>Astor&Yancy</h5>
+                                    <p>Identity</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="hover-item">
+                            <img class="img-responsive" src="assets/images/item4.png">
+                            <div class="hover-overlay">
+                                <div class="item-text">
+                                    <h5>Astor&Yancy</h5>
+                                    <p>Identity</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination col-md-2 col-xs-12 col-md-offset-5">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <img class="" src="assets/images/pagination.png">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="get-in-touch container ">
+        <div class="row">
+            <div class="container headed">
+                <div class="col-lg-8 col-md-8 col-xs-12 col-md-offset-2 text-center ">
+                    <h3 class="text-capitalize">Want to work with us?</h3>
+                    <p>Magnis modipsae que voloratati andigen daepeditem quiate re porem aut labor.
+                        Laceaque quiae sitiorem rest non restibusaes maio es dem tumquam.</p>
+                    <div class="myModal">
+                        <button type="button" class="btn btn-default btn-lg text-uppercase" data-toggle="modal" data-target="#myModal">Get in touch</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+
+                                <div class="modal-content">
+                                    <div class="modal-header">
+
+                                        <h4 class="modal-title">Subscribe now</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="your mail">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer container">
+        <div class="col-md-3">
+            <h6 class="text-uppercase">Who we are</h6>
+            <img class="footer-logo" src="assets/images/footer-logo.png" alt="reen">
+            <p>Magnis modipsae voloratati andigen daepeditem quiate re porem que aut labor.
+                Laceaque eictemperum quiae sitiorem rest non restibusaes maio es dem tumquam.</p>
+            <a>More about us <span class="glyphicon glyphicon-arrow-right"></span></a>
+        </div>
+        <div class="col-md-3">
+            <h6 class="text-uppercase">Latest works</h6>
+            <div class="gallery">
+                <div class="hover-item">
+                    <img class="img-responsive" src="assets/images/thumb1.png" alt="grand motel"/>
+                    <div class="hover-overlay">
+                        <div class="item-text">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hover-item">
+                    <img class="img-responsive" src="assets/images/thumb2.png" alt="grand motel"/>
+                    <div class="hover-overlay">
+                        <div class="item-text">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hover-item">
+                    <img class="img-responsive" src="assets/images/thumb3.png" alt="grand motel"/>
+                    <div class="hover-overlay">
+                        <div class="item-text">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hover-item">
+                    <img class="img-responsive" src="assets/images/thumb4.png" alt="grand motel"/>
+                    <div class="hover-overlay img-responsive">
+                        <div class="item-text">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <h6 class="text-uppercase">Get in touch</h6>
+            <p>Doloreiur quia commolu ptatemp dolupta oreprerum tibusam eumenis et consent accullignis dentibea autem
+                inisita.</p>
+            <address class="contacts">
+                <a href="https://www.google.by/maps/search/84+Street,+City,+State+24813/@30.3112574,-98.1258406,5z/data=!3m1!4b1">
+                    <span class="glyphicon glyphicon-map-marker"></span>84 Street, City, State 24813</a>
+                <a type="callto:+00(123)4567890"><span class="glyphicon glyphicon-phone"></span>+00 (123) 456 78 90</a>
+                <a href="mailto:info@reen.com"><span class="glyphicon glyphicon-envelope"></span>info@reen.com</a>
+            </address>
+        </div>
+        <div class="col-md-3">
+            <h6 class="text-uppercase">Free updates</h6>
+            <p>Conecus iure posae volor remped modis aut lor volor accabora incim resto explabo.</p>
+            <form action="#" class="subscribe">
+                <div class="input-group">
+                    <input class="" name="email" id="email" type="email" placeholder="Enter your email address" >
+                    <button class="btn btn-default" type="submit">SUBSCRIBE</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer-nav container-fluid ">
+        <div class="container ">
+            <div class="copyrights">
+                © 2014 REEN. All rights reserved.
+            </div>
+            <ul class="list-inline">
+                <li><a href="Portfolio">Home</a></li>
+                <li><a href="Portfolio">Portfolio</a></li>
+                <li><a href="Blog">Blog</a></li>
+                <li><a href="About">About</a></li>
+                <li><a href="Services">Services</a></li>
+                <li><a href="Contact">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+</footer>
+
 </body>
 </html>
+

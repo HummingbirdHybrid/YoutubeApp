@@ -1,0 +1,155 @@
+@import "variables";
+@import "mixin";
+
+main {
+  color: $text-main-color;
+  p {
+    color: $text-additional-color;
+    font-family: "Source Sans Pro";
+  }
+  h3 {
+    font-family: "Lato";
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-family: "Lato";
+    font-weight: bold;
+    margin-bottom: 35px;
+  }
+  h4 {
+    font-family: "Lato";
+    font-weight: bold;
+    margin-bottom: 35px;
+  }
+  .headed {
+    margin-bottom: 90px;
+    margin-top: 90px;
+  }
+  .who-are-we {
+    // margin-top: 125px;
+
+    .glyphicon {
+      font-size: 70px;
+      color: $active-color;
+    }
+    h3 + p {
+      font-size: 22px;
+      line-height: 30px;
+    }
+    h4 + p {
+      font-size: 16px;
+    }
+    @media only screen and (max-width: 768px) and (min-width: 0px) {
+      margin-top: 60px;
+      h3 {
+        font-size: 30px;
+      }
+      h4 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+        font-size: 13px;
+      }
+      .icon {
+        text-align: center;
+      }
+    }
+  }
+  .latest-works {
+    background-color: $bg-latest-work;
+    p {
+      font-size: 14px;
+    }
+    figure {
+      background: white;
+      .figure-item {
+        position: relative;
+      }
+      img {
+        height: 100%;
+      }
+
+      figcaption {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 110px;
+        border: 1px gray;
+        h5 {
+          &:hover {
+            cursor: pointer;
+            color: $active-color;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .pagination {
+      margin-top: 35px;
+      img {
+        margin: 10px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      span {
+        color: white;
+        padding: 10px;
+        background: #c9d2da;
+        &:hover {
+          cursor: pointer;
+          background-color: $passive-color;
+          color: $hover-color;
+        }
+      }
+    }
+  }
+  .get-in-touch{
+    h3 + p {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+}
+
+
+.hover-item {
+  position: relative;
+  .hover-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: $hover-color;
+  }
+  &:hover .hover-overlay {
+    cursor: pointer;
+    opacity: 0.85;
+  }
+}
+.item-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  h5 {
+    font-family: 'Lato';
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+  }
+  p {
+    font-size: 14px;
+    font-family: "Source Sans Pro";
+    color: white;
+  }
+}

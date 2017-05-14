@@ -2,7 +2,7 @@ const webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     entry:  {
-        bundle: './src/main.js',
+        bundle: './src/js/main.js',
         style: './src/css/style.css',
         index: './index.html'
     },
@@ -33,7 +33,7 @@ module.exports = {
                 use: [ {
                     loader: 'html-loader',
                     options: {
-                        minimize: true
+                        minimize: false
                     }
                 }]
             }
@@ -42,7 +42,7 @@ module.exports = {
     plugins: [
         new webpack.optimize.UglifyJsPlugin({
             minimize: true,
-            compress: false
+            compress: true
         }),
         new ExtractTextPlugin("[name].css")
     ]

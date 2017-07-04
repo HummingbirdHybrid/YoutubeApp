@@ -1,7 +1,3 @@
-# Noblesse4Razor-front-end-course
-
-Леончик Владислав Игоревич
-
-БГУИР/ФИТУ/АСОИ 2017
-
-+375295098602
+# YouTube Application
+YouTube app using google API, webpack, babel, eslint.
+Working on mobile devices(swiping, responsive)
